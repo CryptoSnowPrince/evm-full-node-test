@@ -6,6 +6,7 @@ export const web3Wss = new Web3(new Web3.providers.WebsocketProvider(process.env
 export const web3Https = new Web3(new Web3.providers.HttpProvider(process.env.HTTPS))
 
 try {
+    console.log('test started')
     var subscription = web3Wss.eth.subscribe('newBlockHeaders', function(error, result){
         console.log("result", result);
     
